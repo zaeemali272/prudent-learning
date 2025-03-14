@@ -20,6 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Prudent Learning</title>
   </head>
@@ -125,139 +126,101 @@
     </header>
     <!-- Nav End -->
     <!-- Carousel Start -->
-    <div
-      id="carouselExampleIndicators"
-      class="relative"
-      data-twe-carousel-init
-      data-twe-ride="carousel"
-    >
-      <!--Carousel indicators-->
+    <div class="w-full">
       <div
-        class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-        data-twe-carousel-indicators
+        id="default-carousel"
+        class="relative rounded-lg overflow-hidden shadow-lg"
+        data-carousel="slide"
       >
+        <!-- Carousel wrapper -->
+        <div class="relative lg:min-h-[600px] md:h-96 min-h-[220px] " data-carousel-inner>
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="assets/1.jpg"
+              class="object-cover w-full h-full"
+              alt="Slide 1"
+            />
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="assets/2.jpg"
+              class="object-cover w-full h-full"
+              alt="Slide 2"
+            />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="assets/3.jpg"
+              class="object-cover w-full h-full"
+              alt="Slide 3"
+            />
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div
+          class="flex absolute bottom-5 left-1/2 z-30 -translate-x-1/2 space-x-2"
+          data-carousel-indicators
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"
+          ></button>
+        </div>
+        <!-- Slider controls -->
         <button
           type="button"
-          data-twe-target="#carouselExampleIndicators"
-          data-twe-slide-to="0"
-          data-twe-carousel-active
-          class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-twe-target="#carouselExampleIndicators"
-          data-twe-slide-to="1"
-          class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-twe-target="#carouselExampleIndicators"
-          data-twe-slide-to="2"
-          class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-
-      <!--Carousel items-->
-      <div
-        class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
-      >
-        <!--First item-->
-        <div
-          class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-twe-carousel-item
-          data-twe-carousel-active
+          class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+          data-carousel-prev
         >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-            class="block w-full"
-            alt="Wild Landscape"
-          />
-        </div>
-        <!--Second item-->
-        <div
-          class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-twe-carousel-item
-        >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-            class="block w-full"
-            alt="Camera"
-          />
-        </div>
-        <!--Third item-->
-        <div
-          class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-twe-carousel-item
-        >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-            class="block w-full"
-            alt="Exotic Fruits"
-          />
-        </div>
-      </div>
-
-      <!--Carousel controls - prev item-->
-      <button
-        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button"
-        data-twe-target="#carouselExampleIndicators"
-        data-twe-slide="prev"
-      >
-        <span class="inline-block h-8 w-8">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-gray-600"
             fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
             stroke="currentColor"
-            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
           </svg>
-        </span>
-        <span
-          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-          >Previous</span
+        </button>
+        <button
+          type="button"
+          class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+          data-carousel-next
         >
-      </button>
-      <!--Carousel controls - next item-->
-      <button
-        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button"
-        data-twe-target="#carouselExampleIndicators"
-        data-twe-slide="next"
-      >
-        <span class="inline-block h-8 w-8">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-gray-600"
             fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
             stroke="currentColor"
-            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
           </svg>
-        </span>
-        <span
-          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-          >Next</span
-        >
-      </button>
+        </button>
+      </div>
     </div>
+
     <!-- Carousel End -->
     <!-- Hero End -->
     <!-- History Start -->
@@ -304,7 +267,7 @@
           >
             <div>
               <img
-                src="https://cdn.easyfrontend.com/pictures/featured/featured_13.png"
+                src="assets/school-4.jpg"
                 alt=""
                 class="max-w-full h-auto rounded-2xl"
               />
@@ -314,7 +277,7 @@
 
         <div class="grid grid-cols-12 justify-center items-center mt-12">
           <div class="col-span-12 md:col-span-5 md:col-start-7 order-2">
-            <div class="flex flex-col justify-center lg:pl-14">
+            <div class="flex flex-col justify-center lg:pl-14 md:pl-7">
               <h4 class="text-2xl font-bold mb-4">The way to heaven.</h4>
               <p class="text-base leading-relaxed text-justify opacity-70 mb-0">
                 More off this less hello salamander lied porpoise much over
@@ -330,7 +293,7 @@
           >
             <div>
               <img
-                src="https://cdn.easyfrontend.com/pictures/about/about9.jpg"
+                src="assets/school-2.jpg"
                 alt=""
                 class="max-w-full h-auto rounded-2xl"
               />
@@ -355,7 +318,7 @@
               >
                 <img
                   src="assets/d1.jpg"
-                  class="md:w-full rounded-full shadow-md dark:shadow-black/30"
+                  class="md:w-full hidden md:block lg:block rounded-full shadow-md dark:shadow-black/30"
                   alt="woman avatar"
                 />
               </div>
@@ -413,15 +376,20 @@
         <div class="grid grid-cols-12 md:mb-12">
           <div class="col-span-12 lg:col-span-6 lg:col-start-4 text-center">
             <h2 class="text-3xl leading-none md:text-[45px] font-bold mb-6">
-              Services We Provide
+              🌟 Introducing Prudent Learning 🌟
             </h2>
             <p class="text-lg opacity-80">
-              Assumenda non repellendus distinctio nihil dicta sapiente,
-              quibusdam maiores, illum at, aliquid blanditiis eligendi qui.
+              Are you looking for a school that nurtures both academic
+              excellence and strong values? Prudent Learning is the first school
+              in your area that proudly aspires to be Tarbiyyah-based, committed
+              to shaping responsible, knowledgeable, and well-rounded
+              individuals, In'Sha'Allah through our:
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-6 text-center pt-12">
+        <div
+          class="grid md:grid-cols-8 lg:grid-cols-16 gap-6 text-center pt-12"
+        >
           <div class="col-span-12 md:col-span-4">
             <div
               class="bg-white dark:bg-slate-800 h-full shadow-xl rounded-[20px] p-6 lg:px-6 lg:py-12"
@@ -429,12 +397,12 @@
               <div
                 class="w-24 h-24 rounded-full text-3xl inline-flex justify-center items-center mb-6 bg-red-600 bg-opacity-10 text-red-600"
               >
-                <i class="fas fa-cannabis"></i>
+                <i class="fa-solid fa-graduation-cap text-white"></i>
               </div>
-              <h4 class="font-medium text-2xl mb-4">Branding</h4>
+              <h4 class="font-medium text-2xl mb-4">Balanced Education</h4>
               <p class="opacity-80">
-                Assumenda non repellendus distinctio nihil dicta sapiente,
-                quibusdam maiores, illum at, aliquid blanditiis eligendi qui.
+                Integrating religious and contemporary studies aligned with our
+                ultimate purpose of creation.
               </p>
             </div>
           </div>
@@ -445,13 +413,12 @@
               <div
                 class="w-24 h-24 rounded-full text-3xl inline-flex justify-center items-center mb-6 bg-blue-600 bg-opacity-10 text-blue-600"
               >
-                <i class="fas fa-random"></i>
+                <i class="fa-solid fa-person-chalkboard text-white"></i>
               </div>
-              <h4 class="font-medium text-2xl mb-4">Content Writing</h4>
+              <h4 class="font-medium text-2xl mb-4">Personalised Support</h4>
               <p class="opacity-80">
-                It’s easier to reach yours have the right savings account. It’s
-                easier to reach your savings goals when you have the right
-                savings account
+                Free remedial classes/ learning support for struggling students,
+                in the evenings and on weekends.
               </p>
             </div>
           </div>
@@ -462,14 +429,27 @@
               <div
                 class="w-24 h-24 rounded-full text-3xl inline-flex justify-center items-center mb-6 bg-yellow-600 bg-opacity-10 text-yellow-600"
               >
-                <i class="fas fa-camera"></i>
+                <i class="fa-solid fa-brain text-white"></i>
               </div>
-              <h4 class="font-medium text-2xl mb-4">Web Development</h4>
+              <h4 class="font-medium text-2xl mb-4">Character Building</h4>
               <p class="opacity-80">
-                Sed ut in perspiciatis unde omnis iste natus error sit on i
-                tatem accusantium doloremque laudantium, totam rem aperiam,
-                eaque ipsa quae.
+                Focused on Tarbiyyah, discipline, and real-life skills
               </p>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-4">
+            <div
+              class="bg-white dark:bg-slate-800 h-full shadow-xl rounded-[20px] p-6 lg:px-6 lg:py-12"
+            >
+              <div
+                class="w-24 h-24 rounded-full text-3xl inline-flex justify-center items-center mb-6 bg-yellow-600 bg-opacity-10 text-yellow-600"
+              >
+                <i class="fa-solid fa-people-roof text-white"></i>
+              </div>
+              <h4 class="font-medium text-2xl mb-4">
+                Safe & Supportive Environment
+              </h4>
+              <p class="opacity-80">Where every child is valued and guided.</p>
             </div>
           </div>
         </div>
@@ -499,21 +479,21 @@
             <img
               alt="gallery"
               class="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
+              src="assets/kids-2.jpg"
             />
           </div>
           <div class="w-1/2 p-1 md:p-2">
             <img
               alt="gallery"
               class="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="assets/kids-4.png"
             />
           </div>
           <div class="w-full p-1 md:p-2">
             <img
               alt="gallery"
               class="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="assets/kids-reading-quran.jpg"
             />
           </div>
         </div>
@@ -522,21 +502,21 @@
             <img
               alt="gallery"
               class="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
+              src="assets/kids-3.jpg"
             />
           </div>
           <div class="w-1/2 p-1 md:p-2">
             <img
               alt="gallery"
               class="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
+              src="assets/kids-1.jpg"
             />
           </div>
           <div class="w-1/2 p-1 md:p-2">
             <img
               alt="gallery"
               class="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
+              src="assets/kids-5.jpg"
             />
           </div>
         </div>
@@ -544,21 +524,20 @@
     </div>
     <!-- Gallery End -->
     <!-- Map Start-->
-    <div class="relative lg:m-20 h-96">
+    <div class="relative m-5 md:m-10 lg:m-20 h-96">
       <iframe
-        class="absolute rounded-md w-full h-full"
+        class="absolute rounded-[10px] w-full h-full"
         src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d856.4004617658547!2d74.37720198814621!3d31.4861206795839!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1741825884543!5m2!1sen!2sus"
-        frameborder="1"
-        style="border: 1"
+        frameborder="0"
+        style="border: 0"
         allowfullscreen="false"
-        aria-hidden="false"
-        tabindex="0"
+        aria-hidden="true"
+        tabindex="1"
       >
       </iframe>
     </div>
     <!-- Map End -->
     <!-- Footer Start -->
-    <!--Footer container-->
     <footer
       class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white"
     >
@@ -691,7 +670,12 @@
       <div class="w-full bg-black/5 p-4 text-center">
         <p>
           Copyright © 2025 All rights reserved | This website is made with
-          <i class="fa-solid fa-heart fa-beat"></i> by paranama.com
+          <i class="fa-solid fa-heart fa-beat"></i> by
+          <a
+            href="https://zaeemali272.github.io/quintessential-devs/"
+            class="text-pretty text-blue-400"
+            >quindev.com</a
+          >
         </p>
       </div>
     </footer>
@@ -796,4 +780,5 @@
     </div>
     <!-- Banner End -->
   </body>
+  <script src="app.js"></script>
 </html>
